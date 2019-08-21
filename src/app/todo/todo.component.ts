@@ -1,6 +1,5 @@
 import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
 import {ToDoItem} from '../to-do-item';
-
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
@@ -8,7 +7,7 @@ import {ToDoItem} from '../to-do-item';
 })
 export class TodoComponent implements OnInit {
 
-  @Output() pushTask = new EventEmitter();
+ @Output() pushTask: EventEmitter<ToDoItem> = new EventEmitter();
 
   submitTodo(task: string){
     const tTask = {
@@ -16,7 +15,7 @@ export class TodoComponent implements OnInit {
       completed: false,
       date: new Date(2019, 9, 9)
     }
-     this.pushTask.emit(tTask);   
+     this.pushTask.emit(tTask);  
   }
 
 

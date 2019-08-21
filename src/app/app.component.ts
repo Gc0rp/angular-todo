@@ -6,6 +6,9 @@ import {ToDoItem} from './to-do-item';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
+
 export class AppComponent {
 
   listOfToDos : ToDoItem[] = [
@@ -13,6 +16,8 @@ export class AppComponent {
   ];
 
   aTask(event){
-    
+    console.log(event);
+    this.listOfToDos.push(event);
+    console.log(this.listOfToDos);
   }
 }

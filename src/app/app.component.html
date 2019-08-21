@@ -2,8 +2,8 @@
 <div style="text-align:center">
   <app-header></app-header>
   <div class="userDisplay">
-    <app-todo class="addTask"></app-todo>
-    <app-show-items></app-show-items>
+    <app-todo class="addTask" (pushTask)="aTask($event)"></app-todo>
+    <app-show-items *ngFor="let item of listOfToDos" [userItem]="item"></app-show-items>
   </div>
 </div>
 
