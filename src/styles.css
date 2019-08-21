@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.userDisplay{
+    display: flex;
+}
+
+.addTask{
+    border: 1px solid red;
+    flex-grow:1;
+    padding-top: 5%;
+}
+
+.showTasks{
+    flex-grow: 1;
+}
