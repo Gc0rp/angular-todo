@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
 import {ToDoItem} from '../to-do-item';
 
 @Component({
@@ -8,7 +8,17 @@ import {ToDoItem} from '../to-do-item';
 })
 export class TodoComponent implements OnInit {
 
-  
+  @Output() pushTask = new EventEmitter();
+
+  submitTodo(task: string){
+    const tTask = {
+      title: task, 
+      completed: false,
+      date: new Date(2019, 9, 9)
+    }
+     this.pushTask.emit(tTask);   
+  }
+
 
 
   constructor() { }

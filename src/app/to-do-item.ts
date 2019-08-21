@@ -8,4 +8,5 @@ export class ToDoItem {
         this.completed = c; 
         this.date = d;
     }
+
 }

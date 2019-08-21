@@ -1,6 +1,6 @@
 <div>
     <h1 id="title">Add a Task</h1> 
-    <input type="text" placeholder="Enter in the task" id="userTask" /> <br>
+    <input #task type="text" placeholder="Enter in the task" id="userTask" /> <br>
 
-    <button type="submit" id="submitButton">Submit </button>
+    <button type="submit" id="submitButton" (click)="submitTodo(task.value)">Submit </button>
 </div>

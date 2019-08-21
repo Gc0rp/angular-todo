@@ -11,4 +11,8 @@ export class AppComponent {
   listOfToDos : ToDoItem[] = [
     new ToDoItem("Homework", true, new Date(2019, 9, 6))
   ];
+
+  aTask(event){
+    
+  }
 }
