@@ -1,4 +1,4 @@
-header{
-    text-align: center;
+.itemStatus{
     border: 1px solid red;
+    text-align: center;
 }

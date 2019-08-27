@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {ToDoItem} from '../to-do-item';
 @Component({
   selector: 'app-show-items',
@@ -8,6 +8,15 @@ import {ToDoItem} from '../to-do-item';
 export class ShowItemsComponent implements OnInit {
 
   @Input() userItem: ToDoItem; 
+  @Output() deleteItem: EventEmitter<void> = new EventEmitter<void>();
+  removeItem(item: ToDoItem){
+    
+    this.deleteItem.emit();
+  }
+
+  itemCompleted(){
+
+  }
 
   constructor() { }
 

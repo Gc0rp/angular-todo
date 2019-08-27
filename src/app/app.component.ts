@@ -11,13 +11,22 @@ import {ToDoItem} from './to-do-item';
 
 export class AppComponent {
 
-  listOfToDos : ToDoItem[] = [
-    new ToDoItem("Homework", true, new Date(2019, 9, 6))
-  ];
+  listOfToDos : ToDoItem[] = [];
 
+  constructor(){
+    
+   console.log(localStorage);
+   this.listOfToDos = JSON.parse(localStorage.getItem('myToDos'));
+  }
+  
   aTask(event){
     console.log(event);
     this.listOfToDos.push(event);
     console.log(this.listOfToDos);
+    localStorage.setItem('myToDos', JSON.stringify(this.listOfToDos));
+    }
+
+  removeItem(item: ToDoItem){
+    this.listOfToDos.splice(this.listOfToDos.indexOf(item), 1);
   }
 }

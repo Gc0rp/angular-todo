@@ -13,9 +13,9 @@ body{
 }
 
 .addTask{
-    border: 1px solid red;
     flex-grow:1;
     padding-top: 5%;
+    flex-direction: column;
 }
 
 .showTasks{
