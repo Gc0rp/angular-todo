@@ -10,9 +10,11 @@ export class TodoComponent implements OnInit {
  @Output() pushTask: EventEmitter<ToDoItem> = new EventEmitter();
 
   today: Date = new Date();
+
+  currentTask: string;
   submitTodo(task: string){
     const tTask = {
-      title: task, 
+      title: this.currentTask, 
       completed: false,
       date: this.today.getFullYear() + '-' + (this.today.getMonth() + 1) + '-' + this.today.getDate()
     }
